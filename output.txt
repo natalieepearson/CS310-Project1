@@ -1,1 +1,4 @@
- 
+Destination | Flight Route from P | Total Cost
+A                   A                   $0
+B                   A B                   $150
+C                   A B C                   $200

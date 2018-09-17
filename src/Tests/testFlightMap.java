@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import CS310.flightMap;
 
-class testFlightMap {
+public class testFlightMap {
 
 	@Test
 	/**
@@ -17,7 +17,7 @@ class testFlightMap {
 		assertEquals(fm.destinationMap.containsKey("P"), true);
 	}
 	/**
-	 * tests the function 
+	 * tests the function addDestination in the fligthMap class by adding a new destination and seeing if the city is in the map and the flight has a price
 	 */
 	public void testAddDestination() {
 		flightMap fm = makeFlightMap();
@@ -25,6 +25,10 @@ class testFlightMap {
 		assertEquals(fm.destinationMap.containsKey("E"), true);
 		assertEquals(fm.destinationMap.get("P").neighbors.get(0).price, 150);
 	}
+	/**
+	 * makes a flightMap to use during testing
+	 * @return flightMap
+	 */
 	public static flightMap makeFlightMap() {
 		flightMap fm = new flightMap();
 		return fm;

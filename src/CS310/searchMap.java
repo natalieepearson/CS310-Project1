@@ -19,10 +19,10 @@ public class searchMap {
 		destination d = map.destinationMap.get(point);
 		if(d.find == false) {
 			d.find = true;
-			totalPath.printPath(output);
+			output = totalPath.printPath(output, d.name);
 			for(int i =0; i < d.neighbors.size(); i++) {
 				totalPath.addToPath(d.neighbors.get(i));
-				search(d.neighbors.get(i).end.name, map, totalPath, output);
+				output = search(d.neighbors.get(i).end.name, map, totalPath, output);
 				totalPath.pop(d.neighbors.get(i).price);
 			}
 		}
@@ -76,13 +76,13 @@ public class searchMap {
 			}
 		}
 		path p = new path(startingPoint);
-		String output = "Destination | Flight Route from P | Total Cost" + "/n";
-		String finalOutput = search(startingPoint, map, p, output);
-		
+		String output = "";
+		String title = "Destination | Flight Route from P | Total Cost" + "\n";
+		String searchOutput = search(startingPoint, map, p, output);
+		String finalOutput = title + searchOutput;
 		FileWriter fw;
 		try {
 			fw = new FileWriter(args[1]);
-			System.out.println(finalOutput);
 			fw.write(finalOutput);
 			fw.close();
 		} catch (IOException e) {

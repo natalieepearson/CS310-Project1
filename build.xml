@@ -80,6 +80,18 @@
     	            <jvmarg line="-ea"/>
     	            <classpath refid="Project1.classpath"/>
     	    </junit>
+    		<junit fork="yes" printsummary="withOutAndErr">
+    	    	        <formatter type="xml"/>
+    	    	        <test name="Tests.testDestination" todir="${junit.output.dir}"/>
+    	    	        <jvmarg line="-ea"/>
+    	    	        <classpath refid="Project1.classpath"/>
+    	    	    </junit>
+    		<junit fork="yes" printsummary="withOutAndErr">
+    	    	        <formatter type="xml"/>
+    	    	        <test name="Tests.testPath" todir="${junit.output.dir}"/>
+    	    	        <jvmarg line="-ea"/>
+    	    	        <classpath refid="Project1.classpath"/>
+    	    	</junit>
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>

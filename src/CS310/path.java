@@ -28,12 +28,12 @@ public class path {
 	 * @param output = the string that is building and in the end written to the file
 	 * @return the string to write to file
 	 */
-	public String printPath(String output) {
+	public String printPath(String output, String name) {
+		output += name + "                   ";
 		for(int i = 0; i < totalPath.size(); i++) {
 			output += totalPath.get(i) + " ";
 		}
-		output += "    $" + totalCost;
-		System.out.println(output);
+		output += "                  $" + totalCost + "\n";
 		return output;
 	}
 	/**
