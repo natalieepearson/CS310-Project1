@@ -42,6 +42,7 @@
 		<jar destfile = "${dist.dir}/util.jar" basedir="${build.dir}" />
 	</target>
 	
+	<!-- JUnit Test -->
 	<property environment="env"/>
     <property name="junit.output.dir" value="junit"/>
     <path id="JUnit 5.libraryclasspath">

@@ -5,7 +5,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class searchMap {
+	/**
+	 * 
+	 * @param point = the point that we are at currently in the graph
+	 * @param map = the entire map of the destinations
+	 * @param totalPath = the entire path at this point
+	 * @param output = the string that holds the entire output
+	 * @return It returns the output string
+	 */
 	public static String search(String point, flightMap map, path totalPath, String output) {
 		destination d = map.destinationMap.get(point);
 		if(d.find == false) {
@@ -67,7 +76,7 @@ public class searchMap {
 			}
 		}
 		path p = new path(startingPoint);
-		String output = " ";
+		String output = "Destination | Flight Route from P | Total Cost" + "/n";
 		String finalOutput = search(startingPoint, map, p, output);
 		
 		FileWriter fw;

@@ -26,6 +26,10 @@ public class flightMap {
 		flight f = new flight(price, this.destinationMap.get(start), this.destinationMap.get(end));
 		this.destinationMap.get(start).addNeighbor(f);
 	}
+	/**
+	 * This function adds the starting point of the map
+	 * @param start = the city that you start on
+	 */
 	public void addStart(String start) {
 		destination d = new destination(start);
 		destinationMap.put(start, d);
