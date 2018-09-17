@@ -29,7 +29,7 @@ public class searchMap {
 		BufferedReader br = null;
 		String startingPoint = null;
 		try {
-			fr = new FileReader("input.txt");
+			fr = new FileReader(args[0]);
 			br = new BufferedReader(fr);
 			startingPoint = br.readLine();
 			map.addStart(startingPoint);
@@ -72,7 +72,7 @@ public class searchMap {
 		
 		FileWriter fw;
 		try {
-			fw = new FileWriter("output.txt");
+			fw = new FileWriter(args[1]);
 			System.out.println(finalOutput);
 			fw.write(finalOutput);
 			fw.close();
