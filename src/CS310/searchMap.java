@@ -77,7 +77,7 @@ public class searchMap {
 		}
 		path p = new path(startingPoint);
 		String output = "";
-		String title = "Destination | Flight Route from P | Total Cost" + "\n";
+		String title = "Destination | Flight Route from " + startingPoint + " | Total Cost" + "\n";
 		String searchOutput = search(startingPoint, map, p, output);
 		String finalOutput = title + searchOutput;
 		FileWriter fw;
