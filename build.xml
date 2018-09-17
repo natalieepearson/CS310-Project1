@@ -70,13 +70,13 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="CS310.testFlightMap" todir="${junit.output.dir}"/>
+            <test name="Tests.testFlightMap" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="Project1.classpath"/>
         </junit>
     		<junit fork="yes" printsummary="withOutAndErr">
     	            <formatter type="xml"/>
-    	            <test name="CS310.testSearchMap" todir="${junit.output.dir}"/>
+    	            <test name="Tests.testSearchMap" todir="${junit.output.dir}"/>
     	            <jvmarg line="-ea"/>
     	            <classpath refid="Project1.classpath"/>
     	    </junit>
