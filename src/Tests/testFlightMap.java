@@ -13,9 +13,9 @@ public class testFlightMap {
 	 */
 	public void testAddStart() {
 		flightMap fm = makeFlightMap();
-		fm.addStart("P");
-		assertEquals(fm.destinationMap.containsKey("P"), true);
+		assertEquals(true, fm.destinationMap.containsKey("P"));
 	}
+	@Test
 	/**
 	 * tests the function addDestination in the fligthMap class by adding a new destination and seeing if the city is in the map and the flight has a price
 	 */
@@ -23,7 +23,7 @@ public class testFlightMap {
 		flightMap fm = makeFlightMap();
 		fm.addDestination("P", "E", 150);
 		assertEquals(fm.destinationMap.containsKey("E"), true);
-		assertEquals(fm.destinationMap.get("P").neighbors.get(0).price, 150);
+		assertEquals(150, fm.destinationMap.get("P").neighbors.get(0).price);
 	}
 	/**
 	 * makes a flightMap to use during testing
@@ -31,6 +31,7 @@ public class testFlightMap {
 	 */
 	public static flightMap makeFlightMap() {
 		flightMap fm = new flightMap();
+		fm.addStart("P");
 		return fm;
 	}
 

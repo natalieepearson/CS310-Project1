@@ -18,7 +18,7 @@ class testDestination {
 		destination b = new destination("B");
 		flight f = new flight(150, a, b);
 		a.addNeighbor(f);
-		assertEquals(a.neighbors.isEmpty(), false);
+		assertEquals(false, a.neighbors.isEmpty());
 	}
 
 }

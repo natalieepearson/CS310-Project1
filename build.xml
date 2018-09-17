@@ -4,7 +4,7 @@
 	</description>
 	
 	<!-- global properties for this build file -->
-	<property name="source.dir" location="src" />
+	<property name="source.dir" location="src/CS310" />
 	<property name="build.dir" location="bin" />
 	<property name="doc.dir" location="doc" />
 	<property name="dist.dir" location="dist" />

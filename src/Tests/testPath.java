@@ -16,28 +16,26 @@ class testPath {
 	 */
 	public void testAddToPath() {
 		path p = makePath();
-		destination a = new destination("A");
-		destination b = new destination("B");
-		flight f = new flight(150, a, b);
-		p.addToPath(f);
 		assertEquals(p.totalPath.isEmpty(), false);
 		
 	}
+	@Test
 	/**
 	 * tests printPath function in path class by printing out the path 
 	 */
 	public void testPrintPath() {
 		path p = makePath();
 		String output = "";
-		assertEquals(p.printPath(output, "B"), "A B     $150");
+		assertEquals(p.printPath(output, "B"), "B                   A B                   $150\n");
 	}
+	@Test
 	/**
 	 * tests pop function in path class by poping from the path and making sure the total cost is less that cost 
 	 */
 	public void testPop() {
 		path p = makePath();
 		p.pop(150);
-		assertEquals(p.totalCost, 0);
+		assertEquals(0, p.totalCost);
 	}
 	/**
 	 * makes a static path for testing purposes
@@ -45,6 +43,10 @@ class testPath {
 	 */
 	public static path makePath() {
 		path p = new path("A");
+		destination a = new destination("A");
+		destination b = new destination("B");
+		flight f = new flight(150, a, b);
+		p.addToPath(f);
 		return p;
 	}
 
