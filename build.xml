@@ -5,6 +5,7 @@
 	
 	<!-- global properties for this build file -->
 	<property name="source.dir" location="src/CS310" />
+	<property name = "sourcetwo.dir" location = "src" />
 	<property name="build.dir" location="bin" />
 	<property name="doc.dir" location="doc" />
 	<property name="dist.dir" location="dist" />
@@ -23,7 +24,7 @@
 	
 	<!-- Generate javadocs for current project into ${doc.dir} -->
 	<target name="doc" depends="init" description="generate documentation">
-		<javadoc sourcepath="${source.dir}" destdir="${doc.dir}" />
+		<javadoc sourcepath="${sourcetwo.dir}" destdir="${doc.dir}" />
 	</target>
 	
 	<!-- Delete the build & doc directories and Emacs backup (*~) files -->
